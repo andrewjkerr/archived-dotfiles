@@ -38,6 +38,7 @@ install homebrew/php/php55 --with-gmp
 # Install other useful binaries
 install ack
 install bfg
+install cheat
 #install exiv2
 install foremost
 install git
