@@ -1,7 +1,7 @@
-# Make vim the default editor
-export EDITOR="vim";
+# Make Sublime the default editor
+export EDITOR="subl";
 
-# Larger bash history (allow 32³ entries; default is 500)
+# Larger zsh history (allow 32³ entries; default is 500)
 export HISTSIZE=32768;
 export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
@@ -23,3 +23,11 @@ export GREP_OPTIONS="--color=auto";
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting;
+
+# boot2docker stuff
+export DOCKER_CERT_PATH=/Users/andrewjkerr/.boot2docker/certs/boot2docker-vm;
+export DOCKER_TLS_VERIFY=1;
+export DOCKER_HOST=tcp://192.168.59.103:2376;
