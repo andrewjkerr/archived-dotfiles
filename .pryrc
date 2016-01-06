@@ -43,23 +43,6 @@ Pry.config.ls.public_method_color = :green
 Pry.config.ls.protected_method_color = :yellow
 Pry.config.ls.private_method_color = :bright_black
 
-# == PLUGINS ===
-# awesome_print gem: great syntax colorized printing
-# look at ~/.aprc for more settings for awesome_print
-begin
-  require 'awesome_print'
-  # The following line enables awesome_print for all pry output,
-  # and it also enables paging
-  Pry.config.print = proc do |output, value|
-    output_value = value.ai rescue value.inspect
-    Pry::Helpers::BaseHelpers.stagger_output("=> #{output_value}", output)
-  end
-
-  # If you want awesome_print without automatic pagination, use the line below
-  # Pry.config.print = proc { |output, value| output.puts value.ai }
-rescue LoadError => err
-  puts "gem install awesome_print  # <-- highly recommended"
-end
 
 # === CUSTOM COMMANDS ===
 # from: https://gist.github.com/1297510
@@ -170,31 +153,5 @@ end
 class Hash
   def self.toy(n: 10)
     Hash[Array.toy(n: n){|c| (96+(c+1)).chr.to_sym}.zip(Array.toy(n: n))]
-  end
-end
-
-# === COLOR CUSTOMIZATION ===
-# Everything below this line is for customizing colors, you have to use the ugly
-# color codes, but such is life.
-CodeRay.scan("example", :ruby).term # just to load necessary files
-# Token colors pulled from: https://github.com/rubychan/coderay/blob/master/lib/coderay/encoders/terminal.rb
-
-$LOAD_PATH << File.dirname(File.realpath(__FILE__))
-
-# In CodeRay >= 1.1.0 token colors are defined as pre-escaped ANSI codes
-if Gem::Version.new(CodeRay::VERSION) >= Gem::Version.new('1.1.0')
-  require "escaped_colors"
-else
-  require "unescaped_colors"
-end
-
-module CodeRay
-  module Encoders
-    class Terminal < Encoder
-      # override old colors
-      TERM_TOKEN_COLORS.each_pair do |key, value|
-        TOKEN_COLORS[key] = value
-      end
-    end
   end
 end
