@@ -24,6 +24,9 @@ set nobackup
 set splitbelow
 set splitright
 
+" Clear trailing whitespace on save for code
+autocmd FileType rb,js,php,go,swift autocmd BufWritePre <buffer> %s/\s\+$//e
+
 """"
 " PLUGINS
 """"
