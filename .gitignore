@@ -15,3 +15,6 @@ Caskfile
 
 # Keep our secrets!
 .secrets
+
+# Ignore .swp files
+*.swp
