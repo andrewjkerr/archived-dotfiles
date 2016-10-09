@@ -1,5 +1,5 @@
 # === EDITOR ===
-Pry.editor = 'subl -w'
+Pry.editor = 'vim'
 
 # === THEME ===
 
@@ -13,23 +13,23 @@ Pry.commands.alias_command 'n', 'next' rescue nil
 # === CUSTOM PROMPT ===
 # This prompt shows the ruby version (useful for RVM)
 Pry.config.prompt =  [
-                    proc { |target_self, nest_level, pry|
-                      prompt = "\e[0;90;49m"
-                      prompt += "#{pry.input_array.size}"
-                      target = Pry.view_clip(target_self)
-                      prompt += " (#{target})" unless target == 'main'
-                      prompt += " \e[0m"
-                      prompt
-                    },
+                        proc { |target_self, nest_level, pry|
+                          prompt = "\e[0;90;49m"
+                          prompt += "#{pry.input_array.size}"
+                          target = Pry.view_clip(target_self)
+                          prompt += " (#{target})" unless target == 'main'
+                          prompt += " \e[0m"
+                          prompt
+                        },
 
-                    proc { |target_self, nest_level, pry|
-                      main_prompt = "#{pry.input_array.size}"
-                      target = Pry.view_clip(target_self)
-                      main_prompt += " (#{target})" unless target == 'main'
-                      main_prompt += ' '
-                      ' '*main_prompt.size
-                    }
-                   ]
+                        proc { |target_self, nest_level, pry|
+                          main_prompt = "#{pry.input_array.size}"
+                          target = Pry.view_clip(target_self)
+                          main_prompt += " (#{target})" unless target == 'main'
+                          main_prompt += ' '
+                          ' '*main_prompt.size
+                        }
+                      ]
 
 
 # === Listing config ===
