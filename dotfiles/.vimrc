@@ -15,7 +15,7 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number
 
 " Colorscheme desert
-colorscheme atom-dark-256 
+colorscheme atom-dark-256
 
 " Get rid of the annoying ~file
 set nobackup
@@ -26,6 +26,9 @@ set splitright
 
 " Clear trailing whitespace on save for code
 autocmd FileType rb,js,php,go,swift autocmd BufWritePre <buffer> %s/\s\+$//e
+
+" Set 2 spaces for Ruby
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
 """"
 " PLUGINS
