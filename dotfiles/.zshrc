@@ -20,4 +20,3 @@ source $ZSH/oh-my-zsh.sh
 [ -f .exports ] && source .exports
 [ -f .functions ] && source .functions
 [ -f .secrets ] && source .secrets
-
