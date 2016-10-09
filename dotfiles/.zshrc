@@ -21,5 +21,3 @@ source $ZSH/oh-my-zsh.sh
 [ -f .functions ] && source .functions
 [ -f .secrets ] && source .secrets
 
-# Launch tmux session if exists; launch tmux if not :)
-(tmux ls | grep -vq attached && tmux at) || tmux
