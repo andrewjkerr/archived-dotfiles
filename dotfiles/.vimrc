@@ -25,7 +25,7 @@ set splitbelow
 set splitright
 
 " Clear trailing whitespace on save for code
-autocmd FileType rb,js,php,go,swift autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Set 2 spaces for Ruby
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
