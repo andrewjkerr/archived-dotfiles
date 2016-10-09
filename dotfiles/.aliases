@@ -43,3 +43,6 @@ alias reload="exec $SHELL -l"
 # Directory navigation
 alias dev='cd ~/Development'
 alias dl='cd ~/Downloads'
+
+# vim
+alias vimplugins='vim +PluginInstall +qall'
