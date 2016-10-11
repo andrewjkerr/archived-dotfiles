@@ -12,6 +12,7 @@ set autoindent
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Line numbers
+set relativenumber
 set number
 
 " Colorscheme desert
@@ -27,8 +28,15 @@ set splitright
 " Clear trailing whitespace on save for code
 autocmd BufWritePre <buffer> %s/\s\+$//e
 
+" Show trailing whitespace
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
+
 " Set 2 spaces for Ruby
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+
+" Automagically resize the window on vim resize
+autocmd VimResized * :wincmd =
 
 """"
 " PLUGINS
@@ -43,6 +51,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim' " Ctrl + P
+Plugin 'christoomey/vim-tmux-navigator' " vim + tmux navigator
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

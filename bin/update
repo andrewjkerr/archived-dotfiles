@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd ${HOME}/Development/dotfiles
+git checkout master
+git pull
+cd ~
+cp ~/Development/dotfiles/dotfiles/.* .
