@@ -1,33 +1,34 @@
 {
-  "detect_indentation": true,
-  "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns":
-  [
-    ".DS_Store",
-    "Desktop.ini",
-    "*.pyc",
-    "._*",
-    "Thumbs.db",
-    ".Spotlight-V100",
-    ".Trashes"
-  ],
-  "folder_exclude_patterns":
-  [
-    ".git",
-    "node_modules"
-  ],
-  "font_size": 14.0,
-  "hot_exit": false,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "itg_small_tabs": true,
-  "remember_open_files": false,
-  "tab_size": 2,
-  "theme": "itg.flat.dark.sublime-theme",
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true,
-  "word_wrap": true
+	"color_scheme": "Packages/Theme - itg.flat/itg.dark.tmTheme",
+	"detect_indentation": true,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"Desktop.ini",
+		"*.pyc",
+		"._*",
+		"Thumbs.db",
+		".Spotlight-V100",
+		".Trashes"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		"node_modules"
+	],
+	"follow_symlinks": true,
+	"font_size": 15.0,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"itg_small_tabs": true,
+	"remember_open_files": false,
+	"tab_size": 4,
+	"theme": "itg.flat.dark.orange.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
 }
-
